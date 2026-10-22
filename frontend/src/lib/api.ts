@@ -14,10 +14,14 @@ import type {
   User,
 } from "./types";
 
+
+const API_BASE_URL = (import.meta.env.VITE_API_BASE_URL ?? "").replace(/\/+$/, "");
+
 const api = axios.create({
-  baseURL: "/api",
+  baseURL: `${API_BASE_URL}/api`,
   headers: { "Content-Type": "application/json" },
 });
+
 
 // Attach the JWT to every outgoing request if one exists.
 api.interceptors.request.use((config: InternalAxiosRequestConfig) => {
