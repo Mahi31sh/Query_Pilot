@@ -1,0 +1,25 @@
+
+# Python environments
+.venv/
+.venv311/
+__pycache__/
+*.py[cod]
+
+# Environment variables and secrets
+.env
+.env.*
+!.env.example
+
+# Python tooling
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Frontend dependencies and build output
+frontend/node_modules/
+frontend/dist/
+
+# Logs and temporary files
+*.log
+.DS_Store
+Thumbs.db
